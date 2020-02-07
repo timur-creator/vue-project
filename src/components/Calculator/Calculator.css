@@ -1,0 +1,238 @@
+.calculator__display {
+    background-color: gray;
+    color: white;
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 9;
+    grid-area: calculator-display;
+    display: block;
+    text-align: right;
+}
+
+.calculator button {
+    color: white;
+    display: block;
+    font-size: 16pt;
+    padding: 0;
+}
+
+.number-button {
+    background-color: darkgray;
+    transition: all ease 500ms;
+}
+
+.number-button:active {
+    background-color: lightgrey
+}
+
+.service-button {
+    background-color: orange;
+}
+
+.service-button:active {
+    background-color: darkgray
+}
+
+.calculator__button-clear {
+    background-color: #ff5722;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: function-clear;
+}
+
+.calculator__button-delete {
+    background-color: #ff5722;
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
+    grid-area: delete;
+}
+
+.calculator__button-one {
+    -ms-grid-row: 9;
+    -ms-grid-column: 1;
+    grid-area: one;
+}
+
+.calculator__button-two {
+    -ms-grid-row: 9;
+    -ms-grid-column: 3;
+    grid-area: two;
+}
+
+.calculator__button-three {
+    -ms-grid-row: 9;
+    -ms-grid-column: 5;
+    grid-area: three;
+}
+
+.calculator__button-four{
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: four;
+}
+
+.calculator__button-five {
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
+    grid-area: five;
+}
+
+.calculator__button-six {
+    -ms-grid-row: 7;
+    -ms-grid-column: 5;
+    grid-area: six;
+}
+
+.calculator__button-seven {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: seven;
+}
+
+.calculator__button-eight {
+    -ms-grid-row: 5;
+    -ms-grid-column: 3;
+    grid-area: eight;
+}
+
+.calculator__button-nine {
+    -ms-grid-row: 5;
+    -ms-grid-column: 5;
+    grid-area: nine;
+}
+
+.calculator__button-zero {
+    -ms-grid-row: 11;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+    grid-area: zero;
+}
+
+.calculator__button-dot {
+    -ms-grid-row: 11;
+    -ms-grid-column: 5;
+    grid-area: dot;
+}
+
+.calculator__button-minus {
+    -ms-grid-row: 7;
+    -ms-grid-column: 9;
+    grid-area: minus;
+}
+
+.calculator__button-add {
+    -ms-grid-row: 9;
+    -ms-grid-column: 9;
+    grid-area: add;
+}
+
+.calculator__button-root {
+    -ms-grid-row: 3;
+    -ms-grid-column: 7;
+    grid-area: function-root;
+}
+
+.calculator__button-divide {
+    -ms-grid-row: 5;
+    -ms-grid-column: 9;
+    grid-area: divide;
+}
+
+.calculator__button-multiple {
+    -ms-grid-row: 3;
+    -ms-grid-column: 9;
+    grid-area: multiple;
+}
+
+.calculator__button-pi {
+    -ms-grid-row: 3;
+    -ms-grid-column: 5;
+    grid-area: pi;
+}
+
+.calculator__button-square {
+    -ms-grid-row: 5;
+    -ms-grid-column: 7;
+    grid-area: function-square;
+}
+
+.calculator__button-power {
+    -ms-grid-row: 9;
+    -ms-grid-column: 7;
+    grid-area: function-power;
+}
+
+.calculator__button-power-minus-one {
+    -ms-grid-row: 7;
+    -ms-grid-column: 7;
+    grid-area: power-minus-one;
+}
+
+.calculator__button-equal {
+    -ms-grid-row: 11;
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 3;
+    grid-area: equal;
+}
+
+.calculator {
+    align-items: stretch;
+    background-color: gray;
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 1px;
+    grid-row-gap: 1px;
+    -ms-grid-rows: 50fr 1fr 50fr 1fr 50fr 1fr 50fr 1fr 50fr 1fr 50fr;
+    grid-template-rows: repeat(6, 1fr);
+    height: 340px;
+    margin: 0;
+    padding: 1px;
+    width: 270px;
+
+}
+
+.calculator-profi-mode {
+    grid-template-areas:
+        "calculator-display calculator-display calculator-display  calculator-display calculator-display"
+        "function-clear delete pi function-root divide"
+        "seven eight nine function-square multiple"
+        "four five six power-minus-one minus"
+        "one two three function-power add"
+        "zero zero dot equal equal";
+    -ms-grid-columns: 50fr 1fr 50fr 1fr 50fr 1fr 50fr 1fr 50fr;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.calculator-normal-mode {
+    grid-template-areas:
+        "calculator-display calculator-display calculator-display  calculator-display"
+        "function-clear delete function-power divide"
+        "seven eight nine multiple"
+        "four five six minus"
+        "one two three add"
+        "zero zero dot equal";
+    -ms-grid-columns: 50fr 1fr 50fr 1fr 50fr 1fr 50fr;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@media (max-width: 350px) {
+    .calculator__display {
+        font-size: 10vw;
+    }
+
+    .calculator {
+        height: 100vw;
+        width: 80vw;
+    }
+
+    .calculator button {
+        font-size: 6vw;
+    }
+}
