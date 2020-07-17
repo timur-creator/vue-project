@@ -18,6 +18,7 @@ import Calculator from "./components/Calculator/Calculator.vue";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer.vue";
 import Memory from "./components/Memory.vue";
+import MeasureConversion from "./components/MeasureConversion.vue";
 
 export default {
   name: "app",
@@ -27,7 +28,8 @@ export default {
     Calculator,
     Gallery,
     Footer,
-    Memory
+    Memory,
+    MeasureConversion
   }
 };
 </script>
